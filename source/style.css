@@ -259,6 +259,19 @@ img {
   font-family: var(--deafult-font-family);
 }
 
+.header h3 {
+  color: white;
+  font-family: var(--deafult-font-family);
+  text-shadow: #272142;
+}
+
+.header a {
+  color: blue;
+}
+.header a:hover {
+  box-shadow: none;
+}
+
 .flex {
   /*Flexbox for containers*/
   display: flex;

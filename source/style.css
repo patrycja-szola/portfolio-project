@@ -101,11 +101,16 @@ p {
   line-height: 30px;
 }
 
-img {
+#photo {
   margin: 30px auto;
   border-radius: 30px;
   width: 50%;
   display: block;
+}
+
+img {
+  margin: 30px auto;
+  border-radius: 30px;
 }
 
 /* Letter wave animation */
@@ -185,22 +190,34 @@ img {
   line-height: 2;
 }
 
-.about-section h1 {
+.content-container h1 {
   text-align: left;
   font-size: 32px;
   line-height: 80px;
 }
-.about-section h2 {
+.content-container h2 {
   font-size: 24px;
   text-align: left;
 }
 
-.about-section p {
+.content-container p {
   font-size: 18px;
   text-align: left;
 }
-.about-section.content {
+.content {
   margin: 30px;
+  text-align: center;
+}
+.content h1 {
+  font-family: var(--deafult-font-family);
+  line-height: 1.5;
+}
+.content h2 {
+  font-family: var(--deafult-font-family);
+  line-height: 1.5;
+}
+.content p {
+  font-size: 14px;
 }
 
 .container {
@@ -259,7 +276,7 @@ img {
   max-height: 150px;
 }
 
-.content {
+.content2 {
   position: relative;
   height: 20vh;
   text-align: center;
@@ -282,27 +299,28 @@ img {
     padding: 0;
     text-align: center;
   }
-  .about-section {
+  .content-container {
     text-align: center;
     padding: 0;
   }
-  .about-section h1 {
+  .content-container h1 {
     text-align: center;
     padding: 0;
   }
-  .about-section h2 {
+  .content-container h2 {
     text-align: center;
     padding: 0;
   }
-  .about-section p {
+  .content-container p {
     text-align: center;
     padding: 0;
   }
+
   .background-waves {
     height: 40px;
     min-height: 40px;
   }
-  .content {
+  .content2 {
     height: 30vh;
   }
 }

@@ -16,6 +16,8 @@ body {
   height: 100vh;
 }
 
+/* Background color-changing Animation */
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -27,6 +29,7 @@ body {
     background-position: 0% 50%;
   }
 }
+/* end */
 
 a {
   position: relative;
@@ -98,43 +101,26 @@ p {
   line-height: 30px;
 }
 
-button {
-  background: transparent;
-  color: #3bd9d9;
-  font-weight: 400;
-  font-size: 24px;
-  text-transform: uppercase;
-  padding: 16px 36px;
-  border: 2px solid #3bd9d9;
-  border-radius: 32px;
-  transform: translate(0);
-  overflow: hidden;
-  cursor: pointer;
-}
-button::before {
-  content: "";
-  position: absolute;
-  background: #3bd9d9;
-  width: 8px;
-  top: 0;
-  bottom: 0;
-  left: -32px;
-  transform: rotate(-16deg);
-  filter: blur(6px);
-}
-button:hover::before {
-  left: calc(100% + 32px);
-  transition: 0.75;
+img {
+  margin: 30px auto;
+  border-radius: 30px;
+  width: 50%;
+  display: block;
 }
 
+/* Letter wave animation */
+
 .wave {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  text-align: center;
   font-size: 60px;
-  color: black;
+  color: white;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(255, 0, 0, 0.3));
 }
 .wave span {
   display: inline-block;
-  animation: wave-anim 1s infinite;
+  animation: wave-anim 2s infinite;
   animation-delay: calc(0.1s * var(--item));
 }
 
@@ -148,10 +134,41 @@ button:hover::before {
     transform: translateY(-20px);
   }
 }
+/* end */
 
+/* Wave Background Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/* end */
 .hero {
   text-align: center;
-  padding: 160px 20px;
+  padding: 30px 20px;
 }
 .hero p {
   font-family: var(--deafult-font-family);
@@ -167,8 +184,27 @@ button:hover::before {
   font-size: 24px;
   line-height: 2;
 }
+
+.about-section h1 {
+  text-align: left;
+  font-size: 32px;
+  line-height: 80px;
+}
+.about-section h2 {
+  font-size: 24px;
+  text-align: left;
+}
+
+.about-section p {
+  font-size: 18px;
+  text-align: left;
+}
+.about-section.content {
+  margin: 30px;
+}
+
 .container {
-  background: var(--secondary-color);
+  /*background: var(--secondary-color);*/
 }
 .btn-branding {
   background: var(--branding-color);
@@ -191,7 +227,47 @@ button:hover::before {
   padding: 120px 60px;
 }
 
-@media (max-width: 900px) {
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: white;
+}
+.header h1 {
+  color: white;
+  font-family: var(--deafult-font-family);
+}
+
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background-waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+  font-size: 50px;
+}
+
+@media (max-width: 700px) {
   h1 {
     font-size: 44px;
     line-height: 1.5;
@@ -205,5 +281,28 @@ button:hover::before {
   .project-description {
     padding: 0;
     text-align: center;
+  }
+  .about-section {
+    text-align: center;
+    padding: 0;
+  }
+  .about-section h1 {
+    text-align: center;
+    padding: 0;
+  }
+  .about-section h2 {
+    text-align: center;
+    padding: 0;
+  }
+  .about-section p {
+    text-align: center;
+    padding: 0;
+  }
+  .background-waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
   }
 }

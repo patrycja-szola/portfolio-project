@@ -158,6 +158,19 @@ footer .social-links a:hover {
   transition: all 100ns ease-in-out;
 }
 
+.footer-details a {
+  background: none;
+  box-shadow: none;
+  color: var(--branding-color);
+  padding: 0;
+}
+
+.footer-details a:hover {
+  background: none;
+  box-shadow: none;
+  color: blue;
+  padding: 0;
+}
 /* Letter wave animation */
 
 .wave {
@@ -254,12 +267,14 @@ footer .social-links a:hover {
   text-align: center;
 }
 
-.content a {
+.content a,
+.project-description a {
   box-shadow: none;
   color: var(--color3);
   background: var(--branding-color);
 }
-.content a:hover {
+.content a:hover,
+.project-description a:hover {
   box-shadow: none;
   background: var(--color3);
   color: var(--branding-color);
@@ -283,15 +298,6 @@ footer .social-links a:hover {
   background: var(--branding-color);
   border-radius: 4px;
   color: white;
-  font-size: 18px;
-  line-height: 27px;
-  padding: 15px 30px;
-}
-
-.btn-branding-outline {
-  border: 1px solid var(--branding-color);
-  border-radius: 4px;
-  color: var(--branding-color);
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
@@ -350,9 +356,19 @@ footer .social-links a:hover {
   height: 20vh;
   text-align: center;
   background-color: white;
-  font-size: 50px;
+  font-size: 16px;
+  box-shadow: none;
 }
-
+.content2 a {
+  color: var(--branding-color);
+  padding: 0;
+  font-size: 16px;
+}
+.content2 a:hover {
+  box-shadow: none;
+  background: none;
+  color: blue;
+}
 @media (max-width: 700px) {
   h1 {
     font-size: 44px;
